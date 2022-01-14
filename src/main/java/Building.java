@@ -24,6 +24,6 @@ public class Building {
     }
 
     public void Add(String name){
-
+        residents.add(name);
     }
 }

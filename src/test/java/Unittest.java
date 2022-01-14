@@ -15,4 +15,12 @@ public class Unittest {
         assertEquals("Hubert",building.residents.get(0));
         assertEquals("mero",building.residents.get(1));
     }
+    @Test
+    public void ShallAddafterInitializing(){
+        String[] resis = new String[]{"Hubert","mero"};
+        Building building = new Building(resis);
+        building.Add("mullah");
+        assertEquals("mullah", building.residents.get(2));
+
+    }
 }
