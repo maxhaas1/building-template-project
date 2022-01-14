@@ -32,4 +32,11 @@ public class Unittest {
         building.Add("mero");
         assertEquals(2,building.residents.size());
     }
+    @Test
+    public void shallremovegivenname(){
+        String[] resis = new String[]{"Hubert","mero"};
+        Building building = new Building(resis);
+        building.Remove("mero");
+        assertEquals(1,building.residents.size());
+    }
 }

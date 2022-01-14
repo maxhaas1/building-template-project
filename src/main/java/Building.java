@@ -30,12 +30,17 @@ public class Building {
         for (String resident : residents) {
             if (Objects.equals(resident, name)) {
                 con = false;
+                break;
             }
         }
         if(con){
             residents.add(name);
         }
 
+    }
+
+    public void Remove(String name){
+        residents.removeIf(resident -> resident == name);
     }
 
 
