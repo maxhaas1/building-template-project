@@ -1,5 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 public class Unittest {
     @Test
     public void Shalladd1ResidentwhenInitializing(){
@@ -22,5 +24,12 @@ public class Unittest {
         building.Add("mullah");
         assertEquals("mullah", building.residents.get(2));
 
+    }
+    @Test
+    public void ShallnotAddSameName(){
+        String[] resis = new String[]{"Hubert","mero"};
+        Building building = new Building(resis);
+        building.Add("mero");
+        assertEquals(2,building.residents.size());
     }
 }

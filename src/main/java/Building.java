@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
+import java.util.stream.Stream;
 
 public class Building {
     public Integer id;
@@ -24,6 +26,17 @@ public class Building {
     }
 
     public void Add(String name){
-        residents.add(name);
+        boolean con= true;
+        for (String resident : residents) {
+            if (Objects.equals(resident, name)) {
+                con = false;
+            }
+        }
+        if(con){
+            residents.add(name);
+        }
+
     }
+
+
 }
