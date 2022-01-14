@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Building {
     public Integer id;
@@ -15,7 +16,7 @@ public class Building {
     public Building(String[] residennters){
         residents =  new ArrayList<String>();
         numberofResidents = 0;
-        System.arraycopy(residennters, 0, residents, 0, residennters.length);
+        Collections.addAll(residents, residennters);
     }
 
     public Integer getNumberofResidents() {
